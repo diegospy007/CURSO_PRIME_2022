@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.10 on win32)" generated="20220126 21:04:36.876" rpa="false" schemaversion="2">
+<suite id="s1" name="Webautomation" source="C:\VSCode Workspace\Curso_Robot_Prime\webautomation.robot">
+<test id="s1-t1" name="Cenario: Criar usuário com sucesso">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220126 21:04:37.114" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220126 21:04:37.114" endtime="20220126 21:04:38.192"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://automacaocombatista.herokuapp.com/users/new</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220126 21:04:38.193" level="INFO">Opening url 'https://automacaocombatista.herokuapp.com/users/new'</msg>
+<status status="PASS" starttime="20220126 21:04:38.193" endtime="20220126 21:04:39.943"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220126 21:04:39.943" endtime="20220126 21:04:40.062"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20220126 21:04:40.062" endtime="20220126 21:04:40.065"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Automação com Batista</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220126 21:04:40.074" level="INFO">Page title is 'Automação com Batista'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.065" endtime="20220126 21:04:40.074"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Novo Usuário!!')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220126 21:04:40.075" endtime="20220126 21:04:40.113"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_name</arg>
+<arg>${NOVO_USUARIO.nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.117" level="INFO">Typing text 'Diego' into text field 'id=user_name'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.114" endtime="20220126 21:04:40.210"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_lastname</arg>
+<arg>${NOVO_USUARIO.ult_nome}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.211" level="INFO">Typing text 'Maidel' into text field 'id=user_lastname'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.211" endtime="20220126 21:04:40.296"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_email</arg>
+<arg>${NOVO_USUARIO.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.298" level="INFO">Typing text 'diego.mello@primecontrol.com' into text field 'id=user_email'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.296" endtime="20220126 21:04:40.410"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_address</arg>
+<arg>${NOVO_USUARIO.endereço}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.411" level="INFO">Typing text 'Rua aprendendo automação' into text field 'id=user_address'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.410" endtime="20220126 21:04:40.537"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_university</arg>
+<arg>${NOVO_USUARIO.universidade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.538" level="INFO">Typing text 'Unibrasil' into text field 'id=user_university'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.538" endtime="20220126 21:04:40.619"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_gender</arg>
+<arg>${NOVO_USUARIO.genero}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.620" level="INFO">Typing text 'masculino' into text field 'id=user_gender'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.619" endtime="20220126 21:04:40.705"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_age</arg>
+<arg>${NOVO_USUARIO.idade}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.706" level="INFO">Typing text '27' into text field 'id=user_age'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.705" endtime="20220126 21:04:40.788"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_profile</arg>
+<arg>${NOVO_USUARIO.profi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.789" level="INFO">Typing text 'QA' into text field 'id=user_profile'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.788" endtime="20220126 21:04:40.863"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@value='Criar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220126 21:04:40.863" level="INFO">Clicking element 'xpath=//input[@value='Criar']'.</msg>
+<status status="PASS" starttime="20220126 21:04:40.863" endtime="20220126 21:04:41.658"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Usuário Criado com sucesso')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220126 21:04:41.659" endtime="20220126 21:04:41.684"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>50</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220126 21:05:31.693" level="INFO">Slept 50 seconds</msg>
+<status status="PASS" starttime="20220126 21:04:41.686" endtime="20220126 21:05:31.693"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220126 21:05:31.694" endtime="20220126 21:05:33.780"/>
+</kw>
+<tag>abre_navegador</tag>
+<status status="PASS" starttime="20220126 21:04:37.113" endtime="20220126 21:05:33.781"/>
+</test>
+<doc>Aqui estarão presentes todos os testes automatizados automação web</doc>
+<status status="PASS" starttime="20220126 21:04:36.878" endtime="20220126 21:05:33.783"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">abre_navegador</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Webautomation">Webautomation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
